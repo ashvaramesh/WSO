@@ -49,56 +49,74 @@ struct LoginView: View {
     }
 }
 
-struct LoginView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-    }
-}
-
-
-import SwiftUI
-
-struct MenuView: View {
-    var body: some View {
-        NavigationView {
-            List {
-                NavigationLink(destination: ProfileView()) {
-                    Text("Profile")
-                }
-                NavigationLink(destination: SettingsView()) {
-                    Text("Settings")
-                }
-            }
-            .navigationTitle("Menu")
-        }
-    }
-}
-
-struct MenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuView()
-    }
-}
-
-
-Learning Journal
-
-1. Tutorials, Courses, and Materials
-
 This Week (9/16/24):
 
-	•	Tutorial: SwiftUI Basics - Introduction to building user interfaces with SwiftUI.
-	•	Course: iOS Development with Swift - Focused on building iOS apps using Swift.
-	•	Material: Apple’s SwiftUI Documentation - Official documentation for SwiftUI components and usage.
+	•	Tutorial: HTML & CSS Basics - A guide on structuring content with HTML and styling it using CSS.
+	•	Course: Responsive Web Design Principles - Focused on learning how to create responsive websites that adjust to different screen sizes and devices.
+	•	Material: Bootstrap Documentation - A framework for designing responsive and mobile-first websites quickly and easily.
 
 2. Key Concepts or Tools Learned
 
-	•	SwiftUI: Understanding of basic SwiftUI components like Text, Button, and VStack.
-	•	Navigation: Implemented navigation between different views using NavigationView and NavigationLink.
-	•	State Management: Learned to manage state with @State and @Binding properties in SwiftUI.
+	•	HTML & CSS: Developed a deeper understanding of HTML tags for structuring web content (such as div, header, nav, and footer), and learned how to style these elements using CSS for colors, fonts, and layouts.
+	•	Responsive Design: Gained insights into how to make a website adjust seamlessly across various screen sizes using media queries in CSS and responsive design frameworks like Bootstrap.
+	•	Navigation Bar: Learned how to create a responsive navigation bar that adjusts based on the device’s screen width, making the site more user-friendly for mobile users.
 
-Challenges Faced:
+Challenges Faced
 
-	•	State Binding Issues: Encountered difficulties with binding state variables between views. Resolved by thoroughly understanding @Binding and using it appropriately.
-	•	Navigation Implementation: Faced challenges in properly setting up NavigationView for seamless transitions between views. Overcame by consulting documentation and examples.
+	•	Cross-Browser Compatibility: Faced challenges ensuring that the website looks consistent across different web browsers (Chrome, Firefox, Safari). Learned to use browser developer tools to identify discrepancies and adjust CSS to fix layout issues.
+	•	Responsive Design Issues: Implementing the layout for mobile devices proved tricky, especially when ensuring that all elements were correctly aligned. I resolved this by using Bootstrap’s grid system and media queries.
+	•	CSS Flexbox & Grid: While attempting to organize the concert schedule section, it was difficult to align multiple elements dynamically. Overcame this by using Flexbox for the alignment of the schedule items and Grid for laying out the event details.
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Waukegan Symphony Orchestra</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">WSO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#concerts">Concerts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
+
+<section id="concerts" class="container mt-5">
+    <h2 class="text-center">Upcoming Concerts</h2>
+    <div class="d-flex justify-content-around flex-wrap">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Spring Concert</h5>
+                <p class="card-text">March 25, 2024 - 7:00 PM</p>
+                <a href="#" class="btn btn-primary">Get Tickets</a>
+            </div>
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Summer Gala</h5>
+                <p class="card-text">June 15, 2024 - 6:00 PM</p>
+                <a href="#" class="btn btn-primary">Get Tickets</a>
+            </div>
+        </div>
+    </div>
+</section>
