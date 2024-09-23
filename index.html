@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waukegan Symphony</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Welcome to the Waukegan Symphony Orchestra</h1>
+            <nav>
+                <ul>
+                    <li><a href="#landing">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Landing Page Section -->
+    <section id="landing" class="landing-section">
+        <div class="container">
+            <h2>Experience the Power of Music</h2>
+            <p>The Waukegan Symphony Orchestra brings together musicians from all walks of life, united by their passion for symphonic music. From classical masterpieces to contemporary works, we provide enriching musical experiences for our community.</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About the Waukegan Symphony Orchestra</h2>
+            <p>Founded in 1974, the Waukegan Symphony Orchestra has been a cornerstone of the Lake County arts community. Our orchestra is composed of professional and amateur musicians, all dedicated to making world-class music accessible to everyone.</p>
+            <p>We perform several concerts each year, featuring a wide variety of repertoire from Beethoven to modern composers. Join us for our next performance and feel the magic of live symphonic music.</p>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" class="login-section">
+        <div class="container">
+            <h2>Login</h2>
+            <form action="login.php" method="post" class="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Waukegan Symphony Orchestra. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
